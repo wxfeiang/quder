@@ -1,0 +1,482 @@
+{
+  "list": [
+    {
+      "id": 0,
+      "topic_name": "刑法修正案（十一）于2021年（ ）正式施行。",
+      "lister": [
+        {
+          "answer_name": "2月1日",
+          "topic": 0
+        },
+        {
+          "answer_name": "3月1日 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "4月1日 ",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "5月1日",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 1,
+      "topic_name": "刑法修正案（十一）对于欺诈发行，修正案将刑期上限由5年有期徒刑提高至（ ）年有期徒刑。",
+      "lister": [
+        {
+          "answer_name": "10  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "12",
+          "topic": 0
+        },
+        {
+          "answer_name": "15",
+          "topic": 1
+        }
+        ,
+        {
+          "answer_name": "20",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 2,
+      "topic_name": "此次刑法修正案(十一)的修订的另一大亮点是压实保荐机构等中介机构的“看门人”责任。对于会计师等中介机构人员在证券发行、重大资产交易活动中出具虚假证明文件、情节特别严重的情形，明确适用更高一档的刑期，最高可判处（ ）年有期徒刑。",
+      "lister": [
+        {
+          "answer_name": "3  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "5",
+          "topic": 0
+        },
+        {
+          "answer_name": "10",
+          "topic": 1
+        },
+        {
+          "answer_name": "15",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 3,
+      "topic_name": "退市新规，从严设置重大财务造假退市量化指标。将造假年限由（ ）年减少为（）年。",
+      "lister": [
+        {
+          "answer_name": "5  3  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "3   2  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "5  2  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "3    1 ",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+
+    {
+      "id": 4,
+      "topic_name": "集资诈骗罪与非法吸收公众存款罪在客观上表现为非法集资的行为，二者区别的关键在于是否以（）为目的。",
+      "lister": [
+        {
+          "answer_name": "非法持有 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "非法牟利",
+          "topic": 0
+        },
+        {
+          "answer_name": "非法占有集资款 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "非法经营",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 5,
+      "topic_name": "刑法修正案（十一）对于欺诈发行，将对个人的罚金由非法募集资金的1%-5%修改为（ ）。",
+      "lister": [
+        {
+          "answer_name": "5%-10%",
+          "topic": 0
+        },
+        {
+          "answer_name": "5%-15% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "10%-20%",
+          "topic": 0
+        },
+        {
+          "answer_name": " 并处罚金",
+          "topic": 1
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 6,
+      "topic_name": "退市新规，从严设置重大财务造假退市量化指标。退市新规，将造假比例由100%降至（ ）。",
+      "lister": [
+        {
+          "answer_name": "60%   ",
+          "topic": 0
+        },
+        {
+          "answer_name": "50% ",
+          "topic": 1
+        },
+        {
+          "answer_name": "30%",
+          "topic": 0
+        },
+        {
+          "answer_name": "80%",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+   
+    {
+      "id": 7,
+      "topic_name": "退市新规，从严设置重大财务造假退市量化指标。造假金额合计数由（ ）亿元降为（）亿元。",
+      "lister": [
+        {
+          "answer_name": "15  10 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "5  3 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "10  3  ",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "10  5",
+          "topic": 1
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 8,
+      "topic_name": "刑法修正案（十一）对于欺诈发行，对单位的罚金由非法募集资金金额的1%-5%提高至（ ）倍。",
+      "lister": [
+        {
+          "answer_name": "10%-20% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "20%-50% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "50%-1  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "20%-1",
+          "topic": 1
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 9,
+      "topic_name": "对于信息披露造假，刑法修正案（十一）将相关责任人员的刑期上限由3年提高至（ ）年。",
+      "lister": [
+        {
+          "answer_name": "5  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "6  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "10",
+          "topic": 1
+        }
+        ,
+        {
+          "answer_name": "15",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 10,
+      "topic_name": "非法吸收公众存款罪的犯罪对象是（ ）。",
+      "lister": [
+        {
+          "answer_name": "单位  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "个人  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "公众 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "公众存款",
+          "topic": 1
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 11,
+      "topic_name": "（ ）以上投资者可以委托投资者保护机构作为代表人参加诉讼。",
+      "lister": [
+        {
+          "answer_name": "二十名  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "三十名  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "四十名  ",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "五十名",
+          "topic": 1
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 12,
+      "topic_name": "对于信息披露造假，刑法修正案（十一）将罚金数额由2万元-20万元修改为（ ）。",
+      "lister": [
+        {
+          "answer_name": "并处罚金 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "5万元-20万元    ",
+          "topic": 0
+        },
+        {
+          "answer_name": "10万元-20万元",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "10万元-30万元",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 13,
+      "topic_name": "因参与非法集资活动受到的损失，承担损失的人是（ ）。",
+      "lister": [
+        {
+          "answer_name": "不法分子承担  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "参与者自行承担 ",
+          "topic": 1
+        }
+        ,
+        {
+          "answer_name": "国家承担 ",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "不法分子和参与者共同承担",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 14,
+      "topic_name": "刑法修正案（十一），将非法吸收公众存款罪的法定最高刑由（ ）年有期徒刑提高到（）年。",
+      "lister": [
+        {
+          "answer_name": "10  15  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "5  15 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "15  20",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "5  10",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 15,
+      "topic_name": "非法集资案件调查取证可采取行业执法调查和（ ）两种形式。",
+      "lister": [
+        {
+          "answer_name": "专项调查  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "特殊调查  ",
+          "topic": 0
+        },
+        
+        {
+          "answer_name": "联合调查 ",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "一般调查  ",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 16,
+      "topic_name": "（ ）固定或涉嫌关联的证券账户之间大量或者频繁进行互为对手方的交易，为异常交易行为。",
+      "lister": [
+        {
+          "answer_name": "2个  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "2个或者2个以上  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "3个",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "3个或者3个以上",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 17,
+      "topic_name": "根据财产状况、金融资产状况、投资知识和经验、专业能力等因素，投资者可以分为（ ）。",
+      "lister": [
+        {
+          "answer_name": "一般投资者和专门投资者  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "普通投资者和专业投资者",
+          "topic": 1
+        },
+        {
+          "answer_name": "一般投资者和专业投资者  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "普通投资者和专门投资者",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+   
+ 
+    {
+      "id": 18,
+      "topic_name": "根据退市新规，退市整理期从30个交易日缩减至（ ）个交易日。",
+      "lister": [
+        {
+          "answer_name": "15 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "20",
+          "topic": 0
+        },
+        {
+          "answer_name": "10",
+          "topic": 0
+        }
+        ,
+        {
+          "answer_name": "18",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    },
+    {
+      "id": 19,
+      "topic_name": "社会公众当遇到个人或机构兜售理财、保险等金融产品时，如何提高风险防范意识（ ）。",
+      "lister": [
+        {
+          "answer_name": "充分认识、了解相关机构的性质和功能",
+          "topic": 0
+        },
+        {
+          "answer_name": "了解相关机构是否有金融业务经营许可证",
+          "topic": 0
+        },
+        {
+          "answer_name": "三项皆是 ",
+          "topic": 1
+        }
+        ,
+        {
+          "answer_name": "从事股权买卖、创业投资和私募股权投资等高度复杂、风险极高的业务，需要较高的专业知识",
+          "topic": 0
+        }
+      ],
+      "analysis": ""
+    }
+  ]
+}
