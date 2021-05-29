@@ -58,7 +58,7 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 .Tkhome {
   width: 100%;
   height: 100%;
@@ -70,19 +70,20 @@ export default {
   padding: 30px;
   width: 174px;
   height: 34px;
-}
-.logo img {
-  width: 100%;
-  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .bg_title {
   margin-top: 120px;
   text-align: center;
   height: 200px;
-}
-.bg_title img {
-  width: 520px;
-  height: 200px;
+  img {
+    width: 520px;
+    height: 200px;
+  }
 }
 .daflog {
   margin: 10px auto 0;

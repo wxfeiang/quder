@@ -9,7 +9,7 @@
         <div class="an_tips">
           <div class="item fraction">
             <img :src="chj" alt="" />
-            <span>100</span>
+            <span> {{ allNum }}</span>
           </div>
           <div class="item title">
             单选题
@@ -33,9 +33,14 @@
         v-for="(item, index) in curlist.lister"
         :key="index"
         @click="addColor(item, index)"
-        :class="{ correct: correct == item.topic }"
+        :class="{
+          correct: item.topic == 1 && statu == 1 && item.stauts == 1,
+          error: item.topic == 0 && item.err == 1,
+        }"
       >
-        <div class="qs_left">{{ index | chard }}</div>
+        <div class="qs_left" v-if="item.topic == 0 && item.err == 1">×</div>
+        <div class="qs_left" v-else-if="item.topic == 1 && statu == 1 && item.stauts == 1">√</div>
+        <div class="qs_left" v-else-if="!item.stauts">{{ index | chard }}</div>
         <div class="qs_right">
           {{ item.answer_name }}
         </div>
@@ -63,10 +68,14 @@ export default {
       strA: 'A',
       chosenContactId: '1',
       list: [],
-      curlist: [],
+      curlist: {},
       curNumber: 0,
-      active: '33', //选中样式
-      correct: '',
+      active: '', //选中样式
+      correct: 1, //  正确答案样式
+      statu: 0,
+      allNum: 0, //  总分数
+
+      errorStauts: 0,
     }
   },
   created: function() {
@@ -78,15 +87,25 @@ export default {
     this.$http.get('data.json?bbh=' + number).then((res) => {
       this.list = res.data.list
       this.curlist = res.data.list[this.curNumber]
+      console.log(this.curlist)
+      // this.Status(this.curlist.lister)
     })
   },
   methods: {
-    //生成 ABCFd
+    // 点击事件
     addColor(item, index) {
       console.log(item, index)
-      // if (item.topic) this.active = item.topic
-      this.active = item.topic
+      item.stauts = 1
+      this.statu = 1
+      if (item.topic == 1) {
+        this.allNum += 2
+      } else {
+        item.err = 1
+      }
+      this.$forceUpdate()
     },
+    //  判断正确答案下标
+
     step(flog) {
       if (flog == 2) {
         this.curNumber++
@@ -94,7 +113,13 @@ export default {
       if (flog == 1) {
         this.curNumber--
       }
+      this.statu = 0
       this.curlist = this.list[this.curNumber]
+    },
+    Status(arry) {
+      return arry.forEach((item) => {
+        item.stauts = 0
+      })
     },
   },
   filters: {
@@ -140,9 +165,9 @@ export default {
 }
 .anser_box {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 30px 30px;
   width: 670px;
-  height: 250px;
+  min-height: 250px;
   background: #5857e9;
   border: 6px solid #9696fa;
   box-shadow: 0px 10px 0px 0px #2226bc;
@@ -215,7 +240,7 @@ export default {
     margin: 0 auto 20px;
     padding: 10px 30px;
     width: 590px;
-    height: 120px;
+    min-height: 120px;
     background: #ffffff;
     border-radius: 20px;
 
