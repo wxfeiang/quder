@@ -5,6 +5,13 @@
       <div class="title_box">
         <img :src="timu" alt="" />
       </div>
+      <!-- 右滑进入 -->
+      <transition name="van-slide-right">
+        <div class="addNum" v-show="visible">
+          <img :src="addNum" alt="" />
+        </div>
+      </transition>
+
       <div class="anser_box">
         <div class="an_tips">
           <div class="item fraction">
@@ -38,16 +45,24 @@
         :key="index"
         @click="addColor(item, index)"
         :class="{
-          correct: item.topic == 1 && statu == 1 && item.stauts == 1,
+          selects: curlist.type == 1 && item.stauts == 3 && !curlist.sublimt,
+          correct: item.topic == 1 && item.stauts == 1,
           error: item.topic == 0 && item.err == 1,
         }"
       >
         <div class="qs_left" v-if="item.topic == 0 && item.err == 1">×</div>
-        <div class="qs_left" v-else-if="item.topic == 1 && statu == 1 && item.stauts == 1">√</div>
+        <div class="qs_left" v-else-if="item.topic == 1 && item.stauts == 1">√</div>
+        <div class="qs_left" v-else-if="curlist.type == 1 && item.stauts == 3 && !curlist.sublimt">
+          {{ index | chard }}
+        </div>
         <div class="qs_left" v-else-if="!item.stauts">{{ index | chard }}</div>
+
         <div class="qs_right">
           {{ item.answer_name }}
         </div>
+      </div>
+      <div class=".sure_btn " v-if="curlist.type == 1">
+        <van-button plain type="primary" @click="sectOver()">确定</van-button>
       </div>
     </div>
     <Footer @step="step" :jlxh="curNumber" :all="list.length" />
@@ -64,21 +79,21 @@ export default {
       flog: '',
       timu: require('../assets/image/timu.png'),
       chj: require('../assets/image/chj.png'),
+      addNum: require('../assets/image/allNum.png'),
       daflog: require('../assets/image/daflog.png'),
       home_bg: {
         backgroundImage: 'url(' + require('../assets/image/bg.png') + ')',
-        backgroundRepeat: 'no-repeat',
       },
       strA: 'A',
       chosenContactId: '1',
       list: [],
       curlist: {},
       curNumber: 0,
-      active: '', //选中样式
-      correct: 1, //  正确答案样式
-      statu: 0,
       allNum: 0, //  总分数
       selecType: 0, // 多选和单选
+      visible: false,
+      timer: '',
+      duration: 0,
     }
   },
   created: function() {
@@ -90,47 +105,165 @@ export default {
     this.$http.get('data.json?bbh=' + number).then((res) => {
       this.list = res.data.list
       this.curlist = res.data.list[this.curNumber]
-      // console.log(this.curlist)
-      // this.Status(this.curlist.lister)
+      for (var i = 0; i < this.curlist.length; i++) {
+        this.curlist[i].sure = false
+      }
     })
+    this.timer = setInterval(this.allTime, 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.timer)
   },
   methods: {
     // 点击事件
     addColor(item, index) {
-      console.log(item, index, this.curlist.type, '---------')
-      item.stauts = 1
-
       //  单选点击一次  加分
-      if (this.curlist.type == 0) {
+      if (this.curlist.type == 0 && this.curlist.selArr.length < 1) {
+        item.stauts = 1
+        this.curlist.sure = 1
         if (item.topic == 1) {
+          //  加分
+          this.visible = true
           this.allNum += 2
-          this.statu = 1
         } else {
           item.err = 1
-          this.statu = 1
+          var key = this.curlist.lister.findIndex((item) => item.topic == 1)
+          this.curlist.lister[key].stauts = 1
         }
-      } else {
-        //  多选
-        var len = this.arrType(this.curlist.lister).length
-        console.log(len, 'len---------------')
-      }
+        this.curlist.selArr.push(index)
 
+        if (this.curNumber < this.list.length - 1) {
+          //  自动下一题
+          setTimeout(() => {
+            this.curNumber++
+            this.curlist = this.list[this.curNumber]
+            this.visible = false
+          }, 1000)
+        }
+      } else if (this.curlist.type == 1) {
+        if (item.stauts != 3 && !this.curlist.sublimt) {
+          console.log(item, index, '---------多选')
+          item.stauts = 3
+          this.curlist.selArr.push(index)
+          //  选项得答案 小标
+          if (item.topic == 1) {
+            item.selCrr = 1
+          } else if (item.topic == 0) {
+            item.selCrr = 0
+          }
+        }
+      }
+      //
+
+      //
       this.$forceUpdate()
     },
-    //  判断正确答案
-    arrType(arr) {
-      return arr.filter((item) => item.topic == 1)
+    //  点击完成按钮
+    sectOver() {
+      if (this.curlist.selArr.length < 1) {
+        this.$dialog.alert({
+          // title: '提示',
+          message: '请选择答案!!',
+        })
+      } else {
+        this.curlist.sublimt = 3
+        this.curlist.sure = 1
+        var arr1 = this.curlist.selArr //  选中以后得数据
+        // console.log(qsArr, 'qsArrqsArrqsArrqsArr')
+
+        var arr2 = [] //  正确答案得数据
+        var arr = this.curlist.lister
+
+        // console.log(arr, 'arrarrarrarr')
+        arr.forEach((item, index) => {
+          if (item.selCrr == 1) {
+            //  选择正确
+            item.stauts = ''
+            item.stauts = 1
+          } else if (item.selCrr == 0) {
+            // 选择错误
+            item.stauts = ''
+            item.err = 1
+          } else {
+            if (item.topic == 1) {
+              item.stauts = ''
+              item.stauts = 1
+            }
+          }
+          // 真确答案
+          if (item.topic == 1) {
+            console.log(index, 'index')
+            arr2.push(index)
+          }
+        })
+        // 判断是否全部正确 坐加分
+        const result =
+          arr1.length === arr2.length &&
+          arr1.every((a) => arr2.some((b) => a === b)) &&
+          arr2.every((_b) => arr1.some((_a) => _a === _b))
+
+        if (result) {
+          this.visible = true
+          this.allNum += 2
+        }
+        this.$forceUpdate()
+        if (this.curNumber < this.list.length - 1) {
+          setTimeout(() => {
+            this.curNumber++
+            this.curlist = this.list[this.curNumber]
+            this.visible = false
+          }, 1000)
+        }
+      }
     },
+    //  判断正确答案下标
 
     step(flog) {
       if (flog == 2) {
-        this.curNumber++
+        if (this.curlist.selArr.length < 1 && this.curlist.sublimt == 3) {
+          this.$dialog.alert({
+            // title: '提示',
+            message: '请选择答案!!',
+          })
+        } else if (this.curlist.sure !== 1) {
+          this.$dialog.alert({
+            // title: '提示',
+            message: '请确认答案!!',
+          })
+        } else {
+          this.curNumber++
+        }
       }
       if (flog == 1) {
         this.curNumber--
       }
-      this.statu = 0
+      if (flog == 3) {
+        if (this.curlist.sure !== 1) {
+          this.$dialog
+            .alert({
+              // title: '提示',
+              message: '请确认答案!!',
+            })
+            .then(() => {
+              // on close
+            })
+        } else {
+          clearInterval(this.timer)
+          this.$router.push({
+            name: 'AnswerOver',
+            query: {
+              duration: this.duration,
+              allNum: this.allNum,
+            },
+          })
+        }
+      }
+      this.visible = false
+
       this.curlist = this.list[this.curNumber]
+    },
+    allTime() {
+      this.duration++
     },
   },
   filters: {
@@ -152,6 +285,7 @@ export default {
   padding: 20px 0 0 0;
   box-sizing: border-box;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .an_top {
   position: relative;
@@ -185,12 +319,22 @@ export default {
   border-radius: 20px 20px 0px 0px;
   box-sizing: border-box;
 }
+.addNum {
+  position: absolute;
+  left: 160px;
+  top: 60px;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
 .an_tips {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+
   .item {
     width: 33%;
   }
@@ -287,12 +431,12 @@ export default {
     .qs_right {
       color: #fff;
     }
-    .showA {
-      background: #5857e9;
-      .qs_left,
-      .qs_right {
-        color: #fff;
-      }
+  }
+  .selects {
+    background: #5857e9;
+    .qs_left,
+    .qs_right {
+      color: #fff;
     }
   }
 }

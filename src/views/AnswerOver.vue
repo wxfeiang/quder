@@ -7,7 +7,7 @@
       <div class="top_box">
         <img :src="over" alt="" />
         <div class="top_tips">
-          {{ evaluate | evaluate }}
+          {{ allNum | evaluate }}
         </div>
       </div>
       <div class="desion">
@@ -16,7 +16,7 @@
             本轮得分
           </div>
           <div class="otem_center">
-            99
+            {{ allNum }}
           </div>
         </div>
         <div class="item_box">
@@ -24,7 +24,7 @@
             本轮用时
           </div>
           <div class="otem_center">
-            99
+            {{ duration }}
           </div>
         </div>
       </div>
@@ -44,10 +44,11 @@ export default {
     // Study,
     // Footer,
   },
+
   data() {
     return {
       duration: '',
-      evaluate: '',
+      allNum: '',
       daflog: require('../assets/image/daflog.png'),
       logo: require('../assets/image/logo.png'),
       erm: require('../assets/image/logo.png'),
@@ -56,23 +57,22 @@ export default {
         backgroundImage: 'url(' + require('../assets/image/o_bg.png') + ')',
       },
       strA: 'A',
-      chosenContactId: '1',
-      list: [],
-      curlist: [],
-      curNumber: 0,
-      active: '33', //选中样式
-      correct: '',
-      timer: '',
     }
   },
   created() {
     this.duration = this.$route.query.duration
+    this.allNum = this.$route.query.allNum
+  },
+  methods: {
+    study() {
+      this.$router.push('/Answer')
+    },
   },
   filters: {
     evaluate: (value) => {
-      if (vale < 90) {
+      if (value > 90) {
         return '优秀'
-      } else if (60 < value < 90) {
+      } else if (value >= 60 && value < 90) {
         return '及格'
       } else {
         return '未完成'

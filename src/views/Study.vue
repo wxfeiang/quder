@@ -50,8 +50,7 @@ export default {
       list: [],
       curlist: [],
       curNumber: 0,
-      active: '33', //选中样式
-      correct: '',
+
       timer: '',
       duration: 0,
     }

@@ -11,6 +11,7 @@ export default {
   props: {
     jlxh: Number,
     all: Number,
+    sure: Boolean,
   },
   methods: {
     step(flog) {
@@ -42,6 +43,7 @@ export default {
     line-height: 98px;
     text-align: center;
     border: none;
+    border-radius: 0px;
   }
 }
 </style>
