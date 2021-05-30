@@ -3,10 +3,11 @@
     {
       "id": 0,
       "topic_name": "刑法修正案（十一）于2021年（ ）正式施行。",
+      "type": 0,
       "lister": [
         {
           "answer_name": "2月1日",
-          "topic": 1
+          "topic": 0
         },
         {
           "answer_name": "3月1日 ",
@@ -26,6 +27,7 @@
     },
     {
       "id": 1,
+      "type": 1,
       "topic_name": "刑法修正案（十一）对于欺诈发行，修正案将刑期上限由5年有期徒刑提高至（ ）年有期徒刑。",
       "lister": [
         {
@@ -34,7 +36,7 @@
         },
         {
           "answer_name": "12",
-          "topic": 0
+          "topic": 1
         },
         {
           "answer_name": "15",

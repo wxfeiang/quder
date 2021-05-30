@@ -11,9 +11,13 @@
             <img :src="chj" alt="" />
             <span> {{ allNum }}</span>
           </div>
-          <div class="item title">
+          <div class="item title" v-if="curlist.type == 0">
             单选题
           </div>
+          <div class="item title" v-if="curlist.type == 1">
+            多选题
+          </div>
+
           <div class="item flog">
             <span class="n_start">{{ curNumber | Nubers }}</span>
             <span class="n_all">/{{ list.length }} </span>
@@ -74,8 +78,7 @@ export default {
       correct: 1, //  正确答案样式
       statu: 0,
       allNum: 0, //  总分数
-
-      errorStauts: 0,
+      selecType: 0, // 多选和单选
     }
   },
   created: function() {
@@ -87,24 +90,37 @@ export default {
     this.$http.get('data.json?bbh=' + number).then((res) => {
       this.list = res.data.list
       this.curlist = res.data.list[this.curNumber]
-      console.log(this.curlist)
+      // console.log(this.curlist)
       // this.Status(this.curlist.lister)
     })
   },
   methods: {
     // 点击事件
     addColor(item, index) {
-      console.log(item, index)
+      console.log(item, index, this.curlist.type, '---------')
       item.stauts = 1
-      this.statu = 1
-      if (item.topic == 1) {
-        this.allNum += 2
+
+      //  单选点击一次  加分
+      if (this.curlist.type == 0) {
+        if (item.topic == 1) {
+          this.allNum += 2
+          this.statu = 1
+        } else {
+          item.err = 1
+          this.statu = 1
+        }
       } else {
-        item.err = 1
+        //  多选
+        var len = this.arrType(this.curlist.lister).length
+        console.log(len, 'len---------------')
       }
+
       this.$forceUpdate()
     },
-    //  判断正确答案下标
+    //  判断正确答案
+    arrType(arr) {
+      return arr.filter((item) => item.topic == 1)
+    },
 
     step(flog) {
       if (flog == 2) {
@@ -115,11 +131,6 @@ export default {
       }
       this.statu = 0
       this.curlist = this.list[this.curNumber]
-    },
-    Status(arry) {
-      return arry.forEach((item) => {
-        item.stauts = 0
-      })
     },
   },
   filters: {

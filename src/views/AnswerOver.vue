@@ -7,7 +7,7 @@
       <div class="top_box">
         <img :src="over" alt="" />
         <div class="top_tips">
-          优秀
+          {{ evaluate | evaluate }}
         </div>
       </div>
       <div class="desion">
@@ -47,6 +47,7 @@ export default {
   data() {
     return {
       duration: '',
+      evaluate: '',
       daflog: require('../assets/image/daflog.png'),
       logo: require('../assets/image/logo.png'),
       erm: require('../assets/image/logo.png'),
@@ -66,6 +67,17 @@ export default {
   },
   created() {
     this.duration = this.$route.query.duration
+  },
+  filters: {
+    evaluate: (value) => {
+      if (vale < 90) {
+        return '优秀'
+      } else if (60 < value < 90) {
+        return '及格'
+      } else {
+        return '未完成'
+      }
+    },
   },
 }
 </script>
