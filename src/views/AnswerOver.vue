@@ -16,16 +16,17 @@
             本轮得分
           </div>
           <div class="otem_center">
-            {{ allNum }}
+            <!-- {{ allNum }} -->
+            <template>
+              <countTo :startVal="0" :endVal="allNum" :duration="3000"></countTo>
+            </template>
           </div>
         </div>
         <div class="item_box">
           <div class="otem_top">
             本轮用时
           </div>
-          <div class="otem_center">
-            {{ duration }}
-          </div>
+          <div class="otem_center">{{ showTime.mresult }}'{{ showTime.sresult }}"</div>
         </div>
       </div>
       <div class="cp_erm">
@@ -34,21 +35,25 @@
     </div>
     <div class="btn">
       <van-button block class="dy_btns btn_xuexi" @click="study()">再答一遍</van-button>
-      <van-button block class="dy_btns btn_strat" @click="answer()">分享成绩</van-button>
+      <van-button block class="dy_btns btn_strat" @click="share()">分享成绩</van-button>
     </div>
   </div>
 </template>
 <script>
+import { getSeconds } from '../utis/urlParameter'
+import countTo from 'vue-count-to'
 export default {
   components: {
     // Study,
     // Footer,
+    countTo,
   },
 
   data() {
     return {
       duration: '',
       allNum: '',
+      showTime: {},
       daflog: require('../assets/image/daflog.png'),
       logo: require('../assets/image/logo.png'),
       erm: require('../assets/image/logo.png'),
@@ -62,6 +67,7 @@ export default {
   created() {
     this.duration = this.$route.query.duration
     this.allNum = this.$route.query.allNum
+    this.showTime = getSeconds(this.duration)
   },
   methods: {
     study() {
@@ -138,7 +144,7 @@ export default {
         font-family: Source Han Sans CN;
         font-weight: bold;
         color: #ffffff;
-        line-height: 40px;
+        line-height: 56px;
         opacity: 0.5;
       }
       .otem_center {
