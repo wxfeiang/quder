@@ -50,7 +50,6 @@ export default {
       list: [],
       curlist: [],
       curNumber: 0,
-
       timer: '',
       duration: 0,
     }
@@ -63,12 +62,37 @@ export default {
     this.$http.get('data.json?bbh=' + number).then((res) => {
       // console.log(res, '成功')
       this.list = res.data.list
-      this.curlist = res.data.list[this.curNumber]
+      //  监测是否有学习经历
+      var numberS = localStorage.getItem('studyNumber') * 1
+      if (numberS != 0 && numberS < this.list.length - 1) {
+        console.log('jiancedao le ')
+        this.$dialog
+          .confirm({
+            title: '提示',
+            message: '检测到您上次学习的位置,是否继续',
+          })
+          .then(() => {
+            // this.curNumber = numberS
+            // console.log(this.curNumber)
+            // this.curlist = this.list[0]
+
+            this.curNumber = numberS
+            this.curlist = this.list[numberS]
+          })
+          .catch(() => {
+            this.curlist = this.list[this.curNumber]
+          })
+      } else {
+        this.curlist = this.list[this.curNumber]
+      }
     })
+
     this.timer = setInterval(this.allTime, 1000)
   },
   beforeDestroy() {
     clearInterval(this.timer)
+    localStorage.setItem('studyTime', this.duration)
+    localStorage.setItem('studyNumber', this.curNumber)
   },
   methods: {
     step(flog) {
@@ -93,7 +117,6 @@ export default {
 
     allTime() {
       this.duration++
-      console.log(this.duration, '---------this.duration')
     },
   },
 

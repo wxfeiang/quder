@@ -61,8 +61,8 @@
           {{ item.answer_name }}
         </div>
       </div>
-      <div class=".sure_btn " v-if="curlist.type == 1">
-        <van-button plain type="primary" @click="sectOver()">确定</van-button>
+      <div class="sure_btn " v-if="curlist.type == 1">
+        <van-button class="subtn" @click="sectOver()">提交答案</van-button>
       </div>
     </div>
     <Footer @step="step" :jlxh="curNumber" :all="list.length" />
@@ -125,21 +125,20 @@ export default {
           //  加分
           this.visible = true
           this.allNum += 2
+          if (this.curNumber < this.list.length - 1) {
+            //  自动下一题
+            setTimeout(() => {
+              this.curNumber++
+              this.curlist = this.list[this.curNumber]
+              this.visible = false
+            }, 1000)
+          }
         } else {
           item.err = 1
           var key = this.curlist.lister.findIndex((item) => item.topic == 1)
           this.curlist.lister[key].stauts = 1
         }
         this.curlist.selArr.push(index)
-
-        if (this.curNumber < this.list.length - 1) {
-          //  自动下一题
-          setTimeout(() => {
-            this.curNumber++
-            this.curlist = this.list[this.curNumber]
-            this.visible = false
-          }, 1000)
-        }
       } else if (this.curlist.type == 1) {
         if (item.stauts != 3 && !this.curlist.sublimt) {
           console.log(item, index, '---------多选')
@@ -208,11 +207,13 @@ export default {
         }
         this.$forceUpdate()
         if (this.curNumber < this.list.length - 1) {
-          setTimeout(() => {
-            this.curNumber++
-            this.curlist = this.list[this.curNumber]
-            this.visible = false
-          }, 1000)
+          if (result) {
+            setTimeout(() => {
+              this.curNumber++
+              this.curlist = this.list[this.curNumber]
+              this.visible = false
+            }, 1000)
+          }
         }
       }
     },
@@ -438,6 +439,23 @@ export default {
     .qs_right {
       color: #fff;
     }
+  }
+}
+.sure_btn {
+  margin: 30px auto 0;
+  width: 590px;
+  height: 100px;
+  .subtn {
+    width: 590px;
+    height: 100px;
+    font-size: 30px;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    color: #ffffff;
+    background: #7f7eff;
+    box-shadow: 0px 10px 0px #5857e9, 0px 0px 0px #5857e9;
   }
 }
 </style>

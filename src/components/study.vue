@@ -2,7 +2,7 @@
   <!-- 学习模式 -->
   <div class="xuexi_box">
     <div class="xue_item" v-for="(item, index) in curlist" :key="index">
-      {{ item.answer_name }}
+      {{ item.topic == 1 ? item.answer_name : '' }}
     </div>
   </div>
 </template>

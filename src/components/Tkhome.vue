@@ -13,6 +13,9 @@
       <van-button block class="dy_btns btn_xuexi" @click="study()">学习模式</van-button>
       <van-button block class="dy_btns btn_strat" @click="answer()">答题模式</van-button>
     </div>
+    <div class="bbh">
+      版本号 : v_0.0.1
+    </div>
   </div>
 </template>
 
@@ -119,5 +122,16 @@ export default {
 .btn .btn_strat {
   background: #ffab18;
   box-shadow: 0px 10px 0px #f08b2c, 0px 0px 0px #f08b2c;
+}
+.bbh {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  font-size: 24px;
+  font-family: YouYuan;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
 }
 </style>

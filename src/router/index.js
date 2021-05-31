@@ -9,7 +9,7 @@ const routes = [
     name: 'Home',
     component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue'),
     meta: {
-      title: '主页',
+      title: 'REITs快速入门经典50题',
     },
   },
   {
@@ -17,7 +17,7 @@ const routes = [
     name: 'Study',
     component: () => import(/* webpackChunkName: "about" */ '../views/Study.vue'),
     meta: {
-      title: '学习模式',
+      title: 'REITs快速入门经典50题',
     },
   },
   {
@@ -25,7 +25,7 @@ const routes = [
     name: 'Answer',
     component: () => import(/* webpackChunkName: "about" */ '../views/Answer.vue'),
     meta: {
-      title: '答题模式',
+      title: 'REITs快速入门经典50题',
     },
   },
   {
@@ -33,7 +33,7 @@ const routes = [
     name: 'StudyOver',
     component: () => import(/* webpackChunkName: "about" */ '../views/StudyOver.vue'),
     meta: {
-      title: '答题结束',
+      title: 'REITs快速入门经典50题',
     },
   },
   {
@@ -41,12 +41,13 @@ const routes = [
     name: 'AnswerOver',
     component: () => import(/* webpackChunkName: "about" */ '../views/AnswerOver.vue'),
     meta: {
-      title: '答题结束',
+      title: 'REITs快速入门经典50题',
     },
   },
 ]
 
 const router = new VueRouter({
+  // mode: 'history', //去掉url中的#
   routes,
 })
 router.beforeEach((to, from, next) => {

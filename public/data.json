@@ -1,79 +1,1285 @@
 {
   "list": [
     {
-    
-      "topic_name": "刑法修正案（十一）于2021年（ ）正式施行。",
-      "type": 1,
+      "id": 1,
+      "topic_name": "基础设施REITs是哪两个部委联合推进的？",
+      "type": 0,
       "lister": [
         {
-          "answer_name": "2月1日",
+          "answer_name": "证监会和发改委",
+          "topic": 1
+        },
+        {
+          "answer_name": "证监会和银保监会",
           "topic": 0
         },
         {
-          "answer_name": "3月1日 ",
-          "topic": 1
-        },
-        {
-          "answer_name": "4月1日 ",
-          "topic": 1
-        }
-        ,
-        {
-          "answer_name": "5月1日",
+          "answer_name": "中国足协和奥委会 ",
           "topic": 0
         }
       ],
       "selArr": []
     },
     {
-   
+      "id": 2,
+      "topic_name": "基础设施REITs试点通知时间？",
       "type": 0,
-      "topic_name": "刑法修正案（十一）对于欺诈发行，修正案将刑期上限由5年有期徒刑提高至（ ）年有期徒刑。",
       "lister": [
         {
-          "answer_name": "10  ",
+          "answer_name": "2018年4月30日",
           "topic": 0
         },
         {
-          "answer_name": "12",
+          "answer_name": "2019年4月30日 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "2020年4月30日",
           "topic": 1
         },
         {
-          "answer_name": "15",
+          "answer_name": "2021年4月30日",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 3,
+      "topic_name": "公募基础设施证券投资基金指引发布时间（或何时发布）？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "2018年8月6日",
+          "topic": 0
+        },
+        {
+          "answer_name": "2019年8月6日  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "2020年8月6日",
+          "topic": 1
+        },
+        {
+          "answer_name": "2021年8月6日",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 4,
+      "topic_name": "《关于建立全国基础设施领域不动产投资信托基金（REITs）试点项目库的通知》的发布时间？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "2019年1月21日 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "2020年1月21日 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "2021年1月21日",
+          "topic": 1
+        },
+        {
+          "answer_name": "2021年5月21日",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 5,
+      "topic_name": "基础设施公募REITs的意义?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "创新基础设施的投融资方式 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "盘活存量资产 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "创造稳赚不赔的产品",
+          "topic": 0
+        },
+        {
+          "answer_name": "为企业发行债券",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 6,
+      "topic_name": "REITs诞生的时间和地点？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "上世纪80年代，中国 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "上世纪60年代，美国",
+          "topic": 1
+        },
+        {
+          "answer_name": "2021年1月，日本 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "21年1月，德国",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 7,
+      "topic_name": "REITs创设的目标针对哪些领域？",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "商业物业",
+          "topic": 1
+        },
+        {
+          "answer_name": "工业园区",
+          "topic": 1
+        },
+        {
+          "answer_name": "数据中心",
+          "topic": 1
+        },
+        {
+          "answer_name": "仓储物流",
+          "topic": 1
+        },
+        {
+          "answer_name": "基础设施",
+          "topic": 1
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 8,
+      "topic_name": "REITs的运作模式？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "向有投资需求的人类募集资金，投资不动产或相关证券，向投资人分配投资收益",
+          "topic": 1
+        },
+        {
+          "answer_name": "向有投资需求的人类募集资金，直接投资不动产，等待不动产价格增长后卖出获得收益",
+          "topic": 0
+        },
+        {
+          "answer_name": "向有投资需求的人类募集资金，承包不动产使用权，通过租赁给第三方收取租金获得收益",
+          "topic": 0
+        },
+        {
+          "answer_name": "向有投资需求的人类募集资金，购买房地产，等待上涨后卖出获得收益",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 9,
+      "topic_name": "REITs的发展规模？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "仅在美国发行，上市总市值1亿美元  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "在美国和加拿大发行，上市总市值2亿美元 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "在全球40多个国家或地区发行，上市总市值接近2万亿美元",
+          "topic": 1
+        },
+        {
+          "answer_name": "在美国和日本发行，上市总市值3亿美元",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 10,
+      "topic_name": "REITs的类型？",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "权益型 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "抵押型 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "混合型",
+          "topic": 1
+        },
+        {
+          "answer_name": "保本型",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 11,
+      "topic_name": "权益型REITs的投资标的？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "不动产本身",
+          "topic": 1
+        },
+        {
+          "answer_name": "抵押债券以及相关证券 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "股票",
+          "topic": 0
+        },
+        {
+          "answer_name": "开放式基金",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 12,
+      "topic_name": "权益型REITs的风险等级？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "超低风险 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "低风险 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "中等风险",
+          "topic": 1
+        },
+        {
+          "answer_name": "高风险",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 13,
+      "topic_name": "影响权益型REITs的因素？",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "天气",
+          "topic": 0
+        },
+        {
+          "answer_name": "股票指数涨跌",
+          "topic": 0
+        },
+        {
+          "answer_name": "不动产行业景气度 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "经营绩效",
+          "topic": 1
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 14,
+      "topic_name": "抵押型REITs的投资标的？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "不动产本身",
+          "topic": 0
+        },
+        {
+          "answer_name": "抵押债券以及相关证券",
+          "topic": 1
+        },
+        {
+          "answer_name": "开放式基金 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "股票",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 15,
+      "topic_name": "抵押型REITs的投资标的？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "超低风险 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "低风险 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "中高风险  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "高风险",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 16,
+      "topic_name": "影响抵押型REITs的因素？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "空气质量 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "持有人心情 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "市场利率水平   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "基金管理人注册地",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 17,
+      "topic_name": "国内的REITs试点，哪去何种导向？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "权益导向 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "抵押导向  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "混合导向   ",
+          "topic": 0
+        },
+        {
+          "answer_name": "保本导向",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 18,
+      "topic_name": "权益型REITs的特点？",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "穿透交易结构，持有相关不动产的所有权及经营权 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "持有经营权，可以租赁、经营  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "既不持有所有权，也不持有经营权，仅收取分红派息   ",
+          "topic": 0
+        },
+        {
+          "answer_name": "大量购买房地产上市公司股票，持有等待分红派息",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 19,
+      "topic_name": "REITs的收益来源？",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "持有份额价格变动  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "分红派息 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "政府补贴   ",
+          "topic": 0
+        },
+        {
+          "answer_name": "基金公司赠送",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 20,
+      "topic_name": "REITs的两面性是什么？",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "股性，REITs份额价格会随着基础资产价值的变动而产生上涨和下跌 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "股性，REITs份额可以在约定的时间转换为股票  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "债性，REITs份额可以收到较为稳定的分红派息   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "债性，REITs份额可以在约定的时间转换为债券",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 21,
+      "topic_name": "基础设施公募REITs三聚焦是指？",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "重点区域  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "重点行业  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "优质资产   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "过剩产能",
+          "topic": 0
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 22,
+      "topic_name": "基础设施公募REITs聚焦的重点区域，包括但不限于",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "京津冀   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "长江经济带  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "雄安新区    ",
+          "topic": 1
+        },
+        {
+          "answer_name": "粤港澳大湾区",
+          "topic": 1
+        },
+        {
+          "answer_name": "长江三角洲",
+          "topic": 1
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 23,
+      "topic_name": "基础设施公募REITs聚焦重点行业，包括但不限于",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "仓储物流   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "收费公路等交通设施   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "水电气热城市污水垃圾等市政工程     ",
+          "topic": 1
+        },
+        {
+          "answer_name": "信息网络等新型基础设施",
+          "topic": 1
+        },
+        {
+          "answer_name": "国家战略性新兴产业集群",
+          "topic": 1
+        }
+      ],
+      "selArr": []
+    },
+    {
+      "id": 24,
+      "topic_name": "基础设施公募REITs聚焦优质资产特性",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "项目运营时间原则上不低于3年 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "已产生持续、稳定的收益及现金流 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "现金流来源具备较高分散度",
+          "topic": 1
+        },
+        {
+          "answer_name": "现金流主要由市场化运营产生，不依赖第三方补贴等非经常性收入",
+          "topic": 1
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 25,
+      "topic_name": "基础设施公募REITs的基本结构?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "基础设施公募REITs由公募基金+资产支持证券 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "基础设施公募REITs由公募基金+商业贷款 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "基础设施公募REITs由公募基金+私募基金",
+          "topic": 0
+        },
+        {
+          "answer_name": "基础设施公募REITs由公募基金+原始权益人自筹资金",
+          "topic": 0
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 26,
+      "topic_name": "基础设施公募REITs要求基金资产投资于基础设施资产支持证券的比例?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "10% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "30%",
+          "topic": 0
+        },
+        {
+          "answer_name": "50% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "80%",
+          "topic": 1
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 27,
+      "topic_name": "基础设施公募REITs收益分配比例不低于合并后基金年度可供分配金额的?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "20%",
+          "topic": 0
+        },
+        {
+          "answer_name": "40% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "70% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "90%",
+          "topic": 1
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 28,
+      "topic_name": "基础设施公募REITs的运作模式?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "开放式 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "定期开放申购赎回 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "封闭式，场内交易 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "封闭式，不支持交易",
+          "topic": 0
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 29,
+      "topic_name": "基础设施公募REITs的投资流程包括?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "资产支持专项计划持有基础设施项目公司股权 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "基金管理人设立公募基金购买资产支持专项计划份额 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "由运营管理机构负责项目运营 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "由公募投资者现场查看",
+          "topic": 0
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 30,
+      "topic_name": "基础设施公募REITs的参与人包括?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "战略投资者（原始权益人及专业机构投资者） ",
+          "topic": 1
+        },
+        {
+          "answer_name": "网下投资者 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "公众投资者 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "在校高中生",
+          "topic": 0
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 31,
+      "topic_name": "基础设施公募REITs的参与人包括?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "战略投资者（原始权益人及专业机构投资者）配售 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "网下配售    ",
+          "topic": 1
+        },
+        {
+          "answer_name": "网上认购  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "100%网上认购",
+          "topic": 0
+        }
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 32,
+      "topic_name": "基础设施公募REITs公众投资者参与比例?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "无限制 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "不超过总额的56%    ",
+          "topic": 0
+        },
+        {
+          "answer_name": "不超过总额的24%  ",
+          "topic": 1
+        }
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 33,
+      "topic_name": "基础设施公募REITs的初始定价权归属?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "全体投资者 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "战略投资者（原始权益人及专业机构投资者） ",
+          "topic": 0
+        },
+        {
+          "answer_name": "网下投资者  ",
+          "topic": 1
+        }
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 34,
+      "topic_name": "基础设施公募REITs的收益分配在符合分配条件的情况下每年不得少于（）?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "由基金管理人决定次数 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "投票决定次数  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "1次 ",
+          "topic": 1
+        }
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 35,
+      "topic_name": "普通投资者参与基础设施公募REITs的适当性管理要求?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "无适当性要求 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "知悉风险即可   ",
+          "topic": 0
+        },
+        {
+          "answer_name": "需书面签订风险揭示书 ",
+          "topic": 1
+        }
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 36,
+      "topic_name": "基础设施公募REITs风险须知条款包括?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "基金价格波动风险 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "基础设施项目运营风险   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "流动性风险 ",
           "topic": 1
         }
         ,
         {
-          "answer_name": "20",
-          "topic": 0
+          "answer_name": "终止上市风险 ",
+          "topic": 1
         }
+        ,
+        {
+          "answer_name": "税收等政策调控风险 ",
+          "topic": 1
+        }
+     
+        
       ],
-     "selArr": []
+      "selArr": []
     },
     {
-     
-      "type": 0,
-      "topic_name": "此次刑法修正案(十一)的修订的另一大亮点是压实保荐机构等中介机构的“看门人”责任。对于会计师等中介机构人员在证券发行、重大资产交易活动中出具虚假证明文件、情节特别严重的情形，明确适用更高一档的刑期，最高可判处（ ）年有期徒刑。",
+      "id": 37,
+      "topic_name": "基础设施公募REITs重要风险揭示包括?",
+      "type": 1,
       "lister": [
         {
-          "answer_name": "3  ",
-          "topic": 0
-        },
-        {
-          "answer_name": "5",
-          "topic": 0
-        },
-        {
-          "answer_name": "10",
+          "answer_name": "灭失风险 ",
           "topic": 1
         },
         {
-          "answer_name": "15",
+          "answer_name": "运营收入波动风险   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "不动产价格波动风险 ",
+          "topic": 1
+        }
+        ,
+        {
+          "answer_name": "关联交易 ",
+          "topic": 1
+        }
+        ,
+        {
+          "answer_name": "利益冲突与利益输送风险 ",
+          "topic": 1
+        }
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 38,
+      "topic_name": "参与基础设施公募REITs能否简单依据估值或净资产进行投资?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "简单估值即可投资 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "简单看净资产即可投资   ",
+          "topic": 0
+        },
+        {
+          "answer_name": "不能仅凭估值和净资产投资 ",
+          "topic": 1
+        }
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 39,
+      "topic_name": "基础设施公募REITs的三类参与人包括?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "战略投资者（原始权益人及专业机构投资者） ",
+          "topic": 1
+        },
+        {
+          "answer_name": "专业机构投资者   ",
+          "topic": 1
+        },
+        {
+          "answer_name": "公众投资者 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "融资融券投资者 ",
           "topic": 0
         }
+        
+        
+     
+        
       ],
-     "selArr": []
+      "selArr": []
+    },
+    {
+      "id": 40,
+      "topic_name": "通过对战略投资者（原始权益人及专业机构投资者）、网下投资者、公众投资者参与比例的分析，基础设施公募REITs的参与主体是?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "机构投资者  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "普通投资者    ",
+          "topic": 0
+        },
+        {
+          "answer_name": "融资融券投资者 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "个股期权投资者 ",
+          "topic": 0
+        }
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 41,
+      "topic_name": "基础设施公募REITs向原始权益人的配售比例要求?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "要求原始权益人参与战略配售，配售比例不低于发售数量的20%  ",
+          "topic": 1
+        },
+        {
+          "answer_name": "要求原始权益人参与战略配售，配售比例不低于发售数量的50%    ",
+          "topic": 0
+        },
+        {
+          "answer_name": "要求原始权益人参与战略配售，配售比例不低于发售数量的70% ",
+          "topic": 0
+        },
+        {
+          "answer_name": "要求原始权益人参与战略配售，配售比例不低于发售数量的90% ",
+          "topic": 0
+        }
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 42,
+      "topic_name": "基础设施公募REITs原始权益人持有份额的持有期要求?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "参与发售总额20%以内的部分，上市后持有期不少于60个月。超过参与发售总额20%以上的部分，上市后持有期不少于36个月。 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "参与发售总额20%以内的部分，上市后持有期不少于40个月。超过参与发售总额20%以上的部分，上市后持有期不少于36个月。 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "参与发售总额20%以内的部分，上市后持有期不少于60个月。超过参与发售总额20%以上的部分，上市后持有期不少于12个月。 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "参与发售总额20%以内的部分，上市后持有期不少于40个月。超过参与发售总额20%以上的部分，上市后持有期不少于12个月。 ",
+          "topic": 0
+        }
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 43,
+      "topic_name": "参与战略配售的专业机构投资者份额持有期要求?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "专业机构投资者可以参与战略配售，配售份额持有期，上市后不少于12个月。",
+          "topic": 1
+        },
+        {
+          "answer_name": "专业机构投资者可以参与战略配售，配售份额持有期，上市后不少于8个月。  ",
+          "topic": 0
+        },
+        {
+          "answer_name": "专业机构投资者可以参与战略配售，配售份额持有期，上市后不少于6个月。",
+          "topic": 0
+        },
+        {
+          "answer_name": "专业机构投资者可以参与战略配售，配售份额持有期，上市后不少于3个月。 ",
+          "topic": 0
+        }
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 44,
+      "topic_name": "参与战略配售的专业机构投资者份额持有期要求?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "70% ",
+          "topic": 1
+        },
+        {
+          "answer_name": "50%   ",
+          "topic": 0
+        },
+        {
+          "answer_name": "30%",
+          "topic": 0
+        },
+        {
+          "answer_name": "无要求 ",
+          "topic": 0
+        }
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 45,
+      "topic_name": "基础设施公募REITs上市首日涨跌幅限制，其他时间涨跌幅限制?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "基础设施公募REITs上市首日，涨跌幅比例30%，其他时间为10%。",
+          "topic": 1
+        },
+        {
+          "answer_name": "基础设施公募REITs上市首日，涨跌幅比例100%，其他时间为10%。",
+          "topic": 0
+        },
+        {
+          "answer_name": "基础设施公募REITs上市首日，涨跌幅比例不限制，其他时间为10%。",
+          "topic": 0
+        },
+        {
+          "answer_name": "基础设施公募REITs上市首日，涨跌幅比例不限制，其他时间为30%。 ",
+          "topic": 0
+        }
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 46,
+      "topic_name": "对基础设施基金的投资目标、投资策略等作出重大调整?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "对基础设施基金的投资目标、投资策略等作出重大调整",
+          "topic": 1
+        },
+        {
+          "answer_name": "金额占基金净资产50%及以上的扩募 ",
+          "topic": 1
+        },
+        {
+          "answer_name": "金额占基金净资产50%及以上的基础设施项目购入或出售 ",
+          "topic": 1
+        },
+      
+        {
+          "answer_name": "金额占基金净资产20%及以上的关联交易（关联关系持有人应当回避表决，其所持份额不计入有表决权的份额总数）",
+          "topic": 1
+        }
+        
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 47,
+      "topic_name": "基金份额持有人大会，必须经参加大会的基金份额持有人所持表决权的二分之一以上表决通过事项?",
+      "type": 1,
+      "lister": [
+        {
+          "answer_name": "金额低于50%的基础设施基金扩募",
+          "topic": 1
+        },
+        {
+          "answer_name": "金额超过基金净资产20%且低于50%的基础设施项目购入或出售",
+          "topic": 1
+        },
+        {
+          "answer_name": "金额占基金净资产超过5%且低于基金净资产20%的关联交易",
+          "topic": 1
+        },
+      
+        {
+          "answer_name": "更换基金经理",
+          "topic": 0
+        }
+        
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 48,
+      "topic_name": "公众投资者参与基础设施公募REITs场内认购和交易的必须要素?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "签署风险揭示书，开立上交所、深交所证券账户",
+          "topic": 1
+        },
+        {
+          "answer_name": "开立上交所、深交所证券账户",
+          "topic": 0
+        },
+        {
+          "answer_name": "仅需开立上交所证券账户",
+          "topic": 0
+        },
+      
+        {
+          "answer_name": "仅需开立深交所证券账户",
+          "topic": 0
+        }
+        
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 49,
+      "topic_name": "基础设施公募REITs场内交易申报价格最小变动单位是?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "0.001元",
+          "topic": 1
+        },
+        {
+          "answer_name": "0.01元 ",
+          "topic": 0
+        },
+        {
+          "answer_name": "0.1元",
+          "topic": 0
+        },
+      
+        {
+          "answer_name": "1元",
+          "topic": 0
+        }
+        
+        
+        
+     
+        
+      ],
+      "selArr": []
+    },
+    {
+      "id": 50,
+      "topic_name": "应当如何理性参与REITs投资?",
+      "type": 0,
+      "lister": [
+        {
+          "answer_name": "作为中长期资产配置的组成部分，衡量自身风险承受能力，理性审慎参与",
+          "topic": 1
+        },
+        {
+          "answer_name": "作为短线交易品种，短线交易，频繁操作",
+          "topic": 0
+        },
+        {
+          "answer_name": "作为稳定高收益的投资品种，大量买入并持有",
+          "topic": 0
+        },
+      
+        {
+          "answer_name": "作为稳赚不赔的投资品种，持续大量买入",
+          "topic": 0
+        }
+        
+        
+        
+     
+        
+      ],
+      "selArr": []
     }
-   
   ]
 }

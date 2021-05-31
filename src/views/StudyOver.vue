@@ -7,7 +7,8 @@
       <div class="top_box">
         <img :src="over" alt="" />
         <div class="top_tips">
-          {{ allNum | evaluate }}
+          <!-- {{ allNum | evaluate }} -->
+          已完成
         </div>
       </div>
       <div class="desion">
@@ -20,18 +21,20 @@
           </div>
         </div>
       </div>
-      <div class="cp_erm">
+      <!-- <div class="cp_erm">
         <img :src="erm" alt="" />
-      </div>
+        <div id="qrcode" class="qrcode_div"></div>
+      </div> -->
     </div>
     <div class="btn">
       <van-button block class="dy_btns btn_xuexi" @click="study()">再学一遍</van-button>
-      <van-button block class="dy_btns btn_strat" @click="share()">分享学习</van-button>
+      <van-button block class="dy_btns btn_strat" @click="begin()">开始答题</van-button>
     </div>
   </div>
 </template>
 <script>
 import { getSeconds } from '../utis/urlParameter'
+import QRCode from 'qrcodejs2'
 export default {
   components: {
     // Study,
@@ -58,6 +61,11 @@ export default {
     this.allNum = this.$route.query.allNum
     this.showTime = getSeconds(this.duration)
   },
+  mounted() {
+    // this.qrcode() //调用二维码生成的方法
+    this.share()
+  },
+
   methods: {
     study() {
       this.$router.push({
@@ -67,15 +75,32 @@ export default {
         },
       })
     },
+    begin() {
+      this.$router.push('/Answer')
+    },
+    qrcode() {
+      // 和div的id相同 必须是id  class类名会报错
+      // 第二参数是他的配置项
+      let qrCode = new QRCode('qrcode', {
+        text: window.location.href,
+        width: 55,
+        height: 55,
+        colorDark: '#000000',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.H,
+      })
+    },
   },
   filters: {
     evaluate: (value) => {
-      if (value > 90) {
+      if (value == 100) {
+        return '完美'
+      } else if (value >= 90 && value < 100) {
         return '优秀'
-      } else if (value >= 60 && value < 90) {
-        return '及格'
-      } else {
-        return '未完成'
+      } else if (value >= 80 && value < 90) {
+        return '良好'
+      } else if (value < 80) {
+        return '再耐心学一学'
       }
     },
   },
@@ -156,9 +181,19 @@ export default {
     height: 140px;
     text-align: center;
     background: #fff;
-    img {
+    box-sizing: border-box;
+    padding: 5px;
+    .qrcode_div {
       width: 100%;
       height: 100%;
+      display: inline-block;
+      text-align: center;
+      img {
+        width: 100%;
+        height: 100%;
+        padding: 10px; // 利用padding的特性，挤出白边
+        box-sizing: border-box;
+      }
     }
   }
 }
