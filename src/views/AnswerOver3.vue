@@ -7,38 +7,54 @@
       <div class="top_box">
         <img :src="over" alt="" />
         <div class="top_tips">
-          <!-- {{ allNum | evaluate }} -->
-          已完成
+          {{ allNum | evaluate }}
         </div>
       </div>
       <div class="desion">
         <div class="item_box">
           <div class="otem_top">
-            本轮用时
+            本轮得分
           </div>
           <div class="otem_center">
-            <div class="otem_center">{{ showTime.mresult }}' {{ showTime.sresult }}"</div>
+            <!-- {{ allNum }} -->
+            <template>
+              <countTo :startVal="0" :endVal="allNum" :duration="3000"></countTo>
+            </template>
           </div>
         </div>
+        <div class="item_box">
+          <div class="otem_top">
+            本轮用时
+          </div>
+          <div class="otem_center">{{ showTime.mresult }}'{{ showTime.sresult }}"</div>
+        </div>
       </div>
-      <!-- <div class="cp_erm">
+      <div class="cp_erm">
         <img :src="erm" alt="" />
-        <div id="qrcode" class="qrcode_div"></div>
-      </div> -->
+        <!-- <div id="qrcode" class="qrcode_div"></div> -->
+      </div>
     </div>
     <div class="btn">
-      <van-button block class="dy_btns btn_xuexi" @click="study()">再学一遍</van-button>
-      <van-button block class="dy_btns btn_strat" @click="begin()">开始答题</van-button>
+      <van-button block class="dy_btns btn_xuexi" @click="study()">再答一遍</van-button>
+      <van-button block class="dy_btns btn_strat" @click="share()">分享成绩</van-button>
     </div>
+    <van-overlay :show="show" @click="show = false">
+      <div class="wrapper">
+        <img :src="zhisi" alt="" />
+        <p>请点击右上角分享</p>
+      </div>
+    </van-overlay>
   </div>
 </template>
 <script>
 import { getSeconds } from '../utis/urlParameter'
 
+import countTo from 'vue-count-to'
 export default {
   components: {
     // Study,
     // Footer,
+    countTo,
   },
 
   data() {
@@ -48,12 +64,13 @@ export default {
       showTime: {},
       daflog: require('../assets/image/daflog.png'),
       logo: require('../assets/image/logo.png'),
-      erm: require('../assets/image/logo.png'),
+      erm: require('../assets/image/erm.png'),
       over: require('../assets/image/over.png'),
+      zhisi: require('../assets/image/share.png'),
       home_bg: {
         backgroundImage: 'url(' + require('../assets/image/o_bg.png') + ')',
       },
-      strA: 'A',
+      show: false,
     }
   },
   created() {
@@ -62,20 +79,12 @@ export default {
     this.showTime = getSeconds(this.duration)
   },
   mounted() {
-    // this.qrcode() //调用二维码生成的方法
-    this.share()
+    //this.qrcode() //调用二维码生成的方法
+    // this.share()
   },
 
   methods: {
     study() {
-      this.$router.push({
-        name: 'Study',
-        query: {
-          id: '0',
-        },
-      })
-    },
-    begin() {
       this.$router.push('/Answer')
     },
     qrcode() {
@@ -90,6 +99,9 @@ export default {
         correctLevel: QRCode.CorrectLevel.H,
       })
     },
+    share() {
+      this.show = true
+    },
   },
   filters: {
     evaluate: (value) => {
@@ -100,7 +112,7 @@ export default {
       } else if (value >= 80 && value < 90) {
         return '良好'
       } else if (value < 80) {
-        return '再耐心学一学'
+        return '再接再励'
       }
     },
   },
@@ -111,7 +123,7 @@ export default {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 .logo {
   padding: 30px;
@@ -183,6 +195,10 @@ export default {
     background: #fff;
     box-sizing: border-box;
     padding: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
     .qrcode_div {
       width: 100%;
       height: 100%;
@@ -224,6 +240,26 @@ export default {
   .btn_strat {
     background: #ffab18;
     box-shadow: 0px 10px 0px #f08b2c, 0px 0px 0px #f08b2c;
+  }
+}
+.wrapper {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  height: 100%;
+  text-align: right;
+
+  img {
+    margin: 50px 50px 0 0;
+    width: 110px;
+    height: 140px;
+  }
+  p {
+    font-size: 30px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 20px 20px 0 0;
   }
 }
 </style>

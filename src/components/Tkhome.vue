@@ -14,7 +14,7 @@
       <van-button block class="dy_btns btn_strat" @click="answer()">答题模式</van-button>
     </div>
     <div class="bbh">
-      版本号 : v_0.0.1
+      版本号 : v_0.0.2
     </div>
   </div>
 </template>

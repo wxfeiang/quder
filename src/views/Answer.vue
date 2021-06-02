@@ -61,9 +61,9 @@
           {{ item.answer_name }}
         </div>
       </div>
-      <div class="sure_btn " v-if="curlist.type == 1">
-        <van-button class="subtn" @click="sectOver()">提交答案</van-button>
-      </div>
+    </div>
+    <div class="sure_btn " v-if="curlist.type == 1">
+      <van-button class="subtn" @click="sectOver()">{{ curlist.sublimt == 3 ? '下一题' : '提交答案' }}</van-button>
     </div>
     <Footer @step="step" :jlxh="curNumber" :all="list.length" />
   </div>
@@ -90,7 +90,6 @@ export default {
       curlist: {},
       curNumber: 0,
       allNum: 0, //  总分数
-      selecType: 0, // 多选和单选
       visible: false,
       timer: '',
       duration: 0,
@@ -140,6 +139,9 @@ export default {
         }
         this.curlist.selArr.push(index)
       } else if (this.curlist.type == 1) {
+        if (this.curlist.sublimt == 3) {
+          return false
+        }
         if (item.stauts != 3 && !this.curlist.sublimt) {
           console.log(item, index, '---------多选')
           item.stauts = 3
@@ -150,6 +152,16 @@ export default {
           } else if (item.topic == 0) {
             item.selCrr = 0
           }
+        } else {
+          item.stauts = null
+          item.selCrr = null
+          console.log(item, index, '选择过了 ')
+          console.log(this.curlist.selArr, '-----staat----')
+          for (var i = 0; i < this.curlist.selArr.length; i++) {
+            if (this.curlist.selArr[i] == index) {
+              this.curlist.selArr.splice(i, 1)
+            }
+          }
         }
       }
       //
@@ -159,6 +171,12 @@ export default {
     },
     //  点击完成按钮
     sectOver() {
+      if (this.curlist.sublimt == 3) {
+        this.curNumber++
+        this.curlist = this.list[this.curNumber]
+        this.visible = false
+        return false
+      }
       if (this.curlist.selArr.length < 1) {
         this.$dialog.alert({
           // title: '提示',
@@ -177,7 +195,7 @@ export default {
         arr.forEach((item, index) => {
           if (item.selCrr == 1) {
             //  选择正确
-            item.stauts = ''
+
             item.stauts = 1
           } else if (item.selCrr == 0) {
             // 选择错误
@@ -185,7 +203,6 @@ export default {
             item.err = 1
           } else {
             if (item.topic == 1) {
-              item.stauts = ''
               item.stauts = 1
             }
           }
@@ -206,6 +223,7 @@ export default {
           this.allNum += 2
         }
         this.$forceUpdate()
+
         if (this.curNumber < this.list.length - 1) {
           if (result) {
             setTimeout(() => {
@@ -390,6 +408,9 @@ export default {
 }
 .qs_list {
   margin: 40px 0 0 0;
+  height: 55%;
+  padding-bottom: 20px;
+  overflow-y: auto;
   .qs_item {
     display: flex;
     align-items: center;
@@ -442,20 +463,23 @@ export default {
   }
 }
 .sure_btn {
-  margin: 30px auto 0;
-  width: 590px;
-  height: 100px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 375px;
   .subtn {
-    width: 590px;
-    height: 100px;
-    font-size: 30px;
+    width: 375px;
+    background: #9696fa;
+    height: 98px;
+    font-size: 36px;
     font-family: Source Han Sans CN;
     font-weight: bold;
-    border-radius: 50px;
-    border: none;
     color: #ffffff;
-    background: #7f7eff;
-    box-shadow: 0px 10px 0px #5857e9, 0px 0px 0px #5857e9;
+    line-height: 98px;
+    text-align: center;
+    border: none;
+    border-radius: 0px;
   }
 }
 </style>

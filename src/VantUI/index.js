@@ -1,6 +1,6 @@
 //  引入组件
 
-import { Button, Cell, CellGroup, Dialog, Field, Icon, Overlay, Tabbar, TabbarItem, Toast } from 'vant'
+import { Button, Cell, CellGroup, Dialog, Field, Icon, Loading, Overlay, Tabbar, TabbarItem, Toast } from 'vant'
 import 'vant/lib/index.css'
 import Vue from 'vue'
 
@@ -17,3 +17,5 @@ Vue.use(TabbarItem)
 Vue.use(Dialog)
 
 Vue.use(Overlay)
+
+Vue.use(Loading)
