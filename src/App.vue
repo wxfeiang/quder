@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     share() {
-      var surl = window.location.href
+      var surl = 'http://www.yoribo.com/H5/quster/dist/#/'
       console.log('置换签名的地址', surl, encodeURIComponent(surl), '')
       var getUrl = `https://www.yoribo.com/weChat_share/?action=10001&param=[{'surl': '${encodeURIComponent(
         surl
@@ -34,7 +34,7 @@ export default {
     wxstart(res) {
       var data = res.data.Data[0]
 
-      var url = 'http://www.yoribo.com/H5/quster/dist/'
+      var url = 'http://www.yoribo.com/H5/quster/dist/#/'
 
       var appId = data.appid
       var timestamp = data.timestamp

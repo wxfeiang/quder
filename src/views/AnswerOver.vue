@@ -36,9 +36,6 @@
           <!-- <div id="qrcode" class="qrcode_div"></div> -->
         </div>
       </div>
-      <div class="btn" v-if="show">
-        <van-button block class="dy_btns  action" @click="study()">长按保存图片或分享</van-button>
-      </div>
     </div>
 
     <div class="btn" v-if="!show">
@@ -46,14 +43,12 @@
       <van-button block class="dy_btns btn_strat" @click="share()">分享成绩</van-button>
     </div>
     <van-overlay :show="show" @click="shareAction()">
-      <!-- <div class="wrapper">
-        <img :src="zhisi" alt="" />
-        <p>请点击右上角分享</p>
-      </div> -->
-
       <div class="canbox">
         <van-loading vertical v-if="!isloding" class="loding"> 图片正在生成中......</van-loading>
         <img :src="canvasImageUrl" alt="" class="canimg" />
+      </div>
+      <div class="btn" v-if="show">
+        <van-button block class="dy_btns  action">长按保存图片或分享</van-button>
       </div>
     </van-overlay>
   </div>
@@ -187,16 +182,16 @@ export default {
     }
     .top_tips {
       position: absolute;
-      bottom: 48px;
+      bottom: 38px;
       left: 0;
       right: 0;
       width: 100%;
-
       font-size: 36px;
       font-family: Source Han Sans CN;
       font-weight: bold;
       color: #ffffff;
       text-align: center;
+      line-height: 60px;
     }
   }
   .desion {
@@ -256,7 +251,7 @@ export default {
   box-sizing: border-box;
   margin: 30px auto 0;
   position: fixed;
-  bottom: 100px;
+  bottom: 80px;
   left: 0;
   right: 0;
   width: 100%;
@@ -290,7 +285,7 @@ export default {
 .canbox {
   position: z;
   width: 600px;
-  height: 80%;
+  height: 70%;
   display: block;
   margin: 120px auto 0;
   padding: 10px;
