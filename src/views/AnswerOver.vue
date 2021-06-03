@@ -35,10 +35,18 @@
           <img :src="erm" alt="" />
           <!-- <div id="qrcode" class="qrcode_div"></div> -->
         </div>
+        <div class="bottom_text" v-if="show">
+          <p class="">
+            投资REITs先学习
+          </p>
+          <p class="">
+            做投资的明白人
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="btn" v-if="!show">
+    <div class="btn " v-if="!show">
       <van-button block class="dy_btns btn_xuexi" @click="study()">再答一遍</van-button>
       <van-button block class="dy_btns btn_strat" @click="share()">分享成绩</van-button>
     </div>
@@ -47,7 +55,7 @@
         <van-loading vertical v-if="!isloding" class="loding"> 图片正在生成中......</van-loading>
         <img :src="canvasImageUrl" alt="" class="canimg" />
       </div>
-      <div class="btn" v-if="show">
+      <div class="btn btn2" v-if="show">
         <van-button block class="dy_btns  action">长按保存图片或分享</van-button>
       </div>
     </van-overlay>
@@ -242,6 +250,16 @@ export default {
       }
     }
   }
+  .bottom_text {
+    margin: 40px auto 0;
+    p {
+      text-align: center;
+      line-height: 70px;
+      font-family: Source Han Sans CN;
+      font-size: 50px;
+      color: #facc25;
+    }
+  }
 }
 .btn {
   // margin: -60px 0 30px;
@@ -251,7 +269,7 @@ export default {
   box-sizing: border-box;
   margin: 30px auto 0;
   position: fixed;
-  bottom: 80px;
+  bottom: 40px;
   left: 0;
   right: 0;
   width: 100%;
@@ -278,8 +296,12 @@ export default {
   }
   .action {
     width: 600px;
+
     background: #df4508;
   }
+}
+.btn2 {
+  z-index: -1;
 }
 
 .canbox {
